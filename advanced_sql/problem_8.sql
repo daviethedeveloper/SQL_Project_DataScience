@@ -23,6 +23,6 @@ FROM (
 ) AS quarter1_job_postings
 WHERE
     salary_year_avg > 70000 AND
-    job_title_short = 'Data Analyst'
+    job_title_short = 'Data Science'
 ORDER BY
     salary_year_avg DESC
