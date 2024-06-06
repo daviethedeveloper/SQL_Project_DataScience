@@ -1,23 +1,21 @@
 # Introduction
-📊 Dive into the data job market! Focusing on data analyst roles, this project explores 💰 top-paying jobs, 🔥 in-demand skills, and 📈 where high demand meets high salary in data analytics.
+
 
 🔍 SQL queries? Check them out here: [project_sql folder](/project_sql/)
 
 # Background
-Driven by a quest to navigate the data analyst job market more effectively, this project was born from a desire to pinpoint top-paid and in-demand skills, streamlining others work to find optimal jobs.
 
-Data hails from my [SQL Course](https://lukebarousse.com/sql). It's packed with insights on job titles, salaries, locations, and essential skills.
 
 ### The questions I wanted to answer through my SQL queries were:
 
-1. What are the top-paying data analyst jobs?
+1. What are the top-paying data scientist jobs?
 2. What skills are required for these top-paying jobs?
-3. What skills are most in demand for data analysts?
+3. What skills are most in demand for data scientist?
 4. Which skills are associated with higher salaries?
 5. What are the most optimal skills to learn?
 
 # Tools I Used
-For my deep dive into the data analyst job market, I harnessed the power of several key tools:
+For my deep dive into the data scientist job market, I harnessed the power of several key tools:
 
 - **SQL:** The backbone of my analysis, allowing me to query the database and unearth critical insights.
 - **PostgreSQL:** The chosen database management system, ideal for handling the job posting data.
@@ -25,10 +23,10 @@ For my deep dive into the data analyst job market, I harnessed the power of seve
 - **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis, ensuring collaboration and project tracking.
 
 # The Analysis
-Each query for this project aimed at investigating specific aspects of the data analyst job market. Here’s how I approached each question:
+Each query for this project aimed at investigating specific aspects of the data scientist job market. Here’s how I approached each question:
 
 ### 1. Top Paying Data Analyst Jobs
-To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on remote jobs. This query highlights the high paying opportunities in the field.
+To identify the highest-paying roles, I filtered data scientist positions by average yearly salary and location, focusing on remote jobs. This query highlights the high paying opportunities in the field.
 
 ```sql
 SELECT	
@@ -50,13 +48,27 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 ```
-Here's the breakdown of the top data analyst jobs in 2023:
-- **Wide Salary Range:** Top 10 paying data analyst roles span from $184,000 to $650,000, indicating significant salary potential in the field.
-- **Diverse Employers:** Companies like SmartAsset, Meta, and AT&T are among those offering high salaries, showing a broad interest across different industries.
-- **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
+## Top-Paying Data Science Roles Analysis:
+High Salary Range:
+
+The salaries range from $300,000 to $550,000 annually, highlighting the lucrative nature of high-level data science positions.
+The highest salary is for the "Staff Data Scientist/Quant Researcher" at Selby Jennings, demonstrating the premium on quantitative research skills in financial sectors or similarly complex analytical domains.
+Job Titles and Specializations:
+
+**Specialized Roles**: The titles "Staff Data Scientist/Quant Researcher" and "Staff Data Scientist - Business Analytics" suggest a high value placed on specialization within data science, particularly in quantitative research and business analytics.
+
+**Leadership Positions**: Several of the top-paid positions are leadership roles, such as "Head of Data Science" and "Director of Data Science & Analytics". This indicates that leadership in managing teams and strategic decision-making in data science is highly valued.
+Niche Roles: The "Head of Battery Data Science" at Lawrence Harvey points to niche specializations within data science that command high salaries, likely due to the specialized knowledge and skills required.
+
+**Company Names**:
+Companies like Selby Jennings and Demandbase appear multiple times, suggesting that certain companies are willing to invest heavily in top talent to lead their data science initiatives.
+The presence of various companies across different domains (from consultancy to tech and product management) illustrates the broad demand for data science expertise across industry sectors.
+Remote Work Flexibility:
+
+All listed positions are remote ("Anywhere"), reflecting the ongoing trend towards remote work in the tech industry. This flexibility allows companies to attract top talent irrespective of geographical constraints and supports a work-life balance that might contribute to these roles' desirability.
 
 ![Top Paying Roles](assets/1_top_paying_roles.png)
-*Bar graph visualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
+*Bar graph visualizing the salary for the top 10 salaries for data scientist; ChatGPT generated this graph from my SQL query results*
 
 ### 2. Skills for Top Paying Jobs
 To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
