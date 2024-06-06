@@ -1,8 +1,8 @@
 /*
 Answer: What are the top skills based on salary?
-- Look at the average salary associated with each skill for Data Analyst positions
+- Look at the average salary associated with each skill for Data Scientist positions
 - Focuses on roles with specified salaries, regardless of location
-- Why? It reveals how different skills impact salary levels for Data Analysts and 
+- Why? It reveals how different skills impact salary levels for Data Scientist and 
     helps identify the most financially rewarding skills to acquire or improve
 */
 
@@ -13,7 +13,7 @@ FROM job_postings_fact
 INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
-    job_title_short = 'Data Analyst'
+    job_title_short = 'Data Scientist'
     AND salary_year_avg IS NOT NULL
     AND job_work_from_home = True 
 GROUP BY
@@ -23,111 +23,128 @@ ORDER BY
 LIMIT 25;
 
 /*
-Here's a breakdown of the results for top paying skills for Data Analysts:
-- High Demand for Big Data & ML Skills: Top salaries are commanded by analysts skilled in big data technologies (PySpark, Couchbase), machine learning tools (DataRobot, Jupyter), and Python libraries (Pandas, NumPy), reflecting the industry's high valuation of data processing and predictive modeling capabilities.
-- Software Development & Deployment Proficiency: Knowledge in development and deployment tools (GitLab, Kubernetes, Airflow) indicates a lucrative crossover between data analysis and engineering, with a premium on skills that facilitate automation and efficient data pipeline management.
-- Cloud Computing Expertise: Familiarity with cloud and data engineering tools (Elasticsearch, Databricks, GCP) underscores the growing importance of cloud-based analytics environments, suggesting that cloud proficiency significantly boosts earning potential in data analytics.
+
+High-Value Technical Skills:
+
+GDPR: The top skill by salary is knowledge related to the General Data Protection Regulation (GDPR), indicating that expertise in data privacy laws can be highly lucrative.
+Golang: Skills in Go programming language are also highly valued, likely due to its efficiency and suitability for scalable systems, which are critical in data processing.
+Diverse Technology Stack:
+
+Atlassian, Selenium, and OpenCV: This range suggests a demand for skills in project management tools, test automation, and computer vision, respectively.
+Database and Big Data Technologies: Skills like Neo4j (a graph database), DynamoDB (a NoSQL database), and Cassandra reflect a high salary potential for professionals skilled in diverse data storage technologies.
+Specialized Skills in Emerging Technologies:
+
+MicroStrategy and Qlik: Expertise in these business intelligence tools demonstrates the value of being able to leverage data for strategic decision-making.
+Solidity and Rust: High salaries associated with these programming languages highlight the growing importance of blockchain and systems programming skills in the data science field.
+Analytical Tools and Frameworks:
+
+DataRobot and Looker: Knowledge in automated machine learning platforms and business intelligence visualization tools shows that there is a premium on skills that enhance data-driven insights and reporting capabilities.
+Programming Diversity:
+
+Beyond the common Python and R, programming languages like PHP, Go, and Julia being on the list suggest that diverse programming knowledge can also lead to high salaries, especially when these skills are applied in specialized or niche areas.
+
+
 
 [
   {
-    "skills": "pyspark",
-    "avg_salary": "208172"
-  },
-  {
-    "skills": "bitbucket",
-    "avg_salary": "189155"
-  },
-  {
-    "skills": "couchbase",
-    "avg_salary": "160515"
-  },
-  {
-    "skills": "watson",
-    "avg_salary": "160515"
-  },
-  {
-    "skills": "datarobot",
-    "avg_salary": "155486"
-  },
-  {
-    "skills": "gitlab",
-    "avg_salary": "154500"
-  },
-  {
-    "skills": "swift",
-    "avg_salary": "153750"
-  },
-  {
-    "skills": "jupyter",
-    "avg_salary": "152777"
-  },
-  {
-    "skills": "pandas",
-    "avg_salary": "151821"
-  },
-  {
-    "skills": "elasticsearch",
-    "avg_salary": "145000"
+    "skills": "gdpr",
+    "avg_salary": "217738"
   },
   {
     "skills": "golang",
-    "avg_salary": "145000"
-  },
-  {
-    "skills": "numpy",
-    "avg_salary": "143513"
-  },
-  {
-    "skills": "databricks",
-    "avg_salary": "141907"
-  },
-  {
-    "skills": "linux",
-    "avg_salary": "136508"
-  },
-  {
-    "skills": "kubernetes",
-    "avg_salary": "132500"
+    "avg_salary": "208750"
   },
   {
     "skills": "atlassian",
-    "avg_salary": "131162"
+    "avg_salary": "189700"
   },
   {
-    "skills": "twilio",
-    "avg_salary": "127000"
+    "skills": "selenium",
+    "avg_salary": "180000"
   },
   {
-    "skills": "airflow",
-    "avg_salary": "126103"
+    "skills": "opencv",
+    "avg_salary": "172500"
   },
   {
-    "skills": "scikit-learn",
-    "avg_salary": "125781"
-  },
-  {
-    "skills": "jenkins",
-    "avg_salary": "125436"
-  },
-  {
-    "skills": "notion",
-    "avg_salary": "125000"
-  },
-  {
-    "skills": "scala",
-    "avg_salary": "124903"
-  },
-  {
-    "skills": "postgresql",
-    "avg_salary": "123879"
-  },
-  {
-    "skills": "gcp",
-    "avg_salary": "122500"
+    "skills": "neo4j",
+    "avg_salary": "171655"
   },
   {
     "skills": "microstrategy",
-    "avg_salary": "121619"
+    "avg_salary": "171147"
+  },
+  {
+    "skills": "dynamodb",
+    "avg_salary": "169670"
+  },
+  {
+    "skills": "php",
+    "avg_salary": "168125"
+  },
+  {
+    "skills": "tidyverse",
+    "avg_salary": "165513"
+  },
+  {
+    "skills": "solidity",
+    "avg_salary": "165000"
+  },
+  {
+    "skills": "c",
+    "avg_salary": "164865"
+  },
+  {
+    "skills": "go",
+    "avg_salary": "164691"
+  },
+  {
+    "skills": "datarobot",
+    "avg_salary": "164500"
+  },
+  {
+    "skills": "qlik",
+    "avg_salary": "164485"
+  },
+  {
+    "skills": "redis",
+    "avg_salary": "162500"
+  },
+  {
+    "skills": "watson",
+    "avg_salary": "161710"
+  },
+  {
+    "skills": "rust",
+    "avg_salary": "161250"
+  },
+  {
+    "skills": "elixir",
+    "avg_salary": "161250"
+  },
+  {
+    "skills": "cassandra",
+    "avg_salary": "160850"
+  },
+  {
+    "skills": "looker",
+    "avg_salary": "158715"
+  },
+  {
+    "skills": "slack",
+    "avg_salary": "158333"
+  },
+  {
+    "skills": "terminal",
+    "avg_salary": "157500"
+  },
+  {
+    "skills": "airflow",
+    "avg_salary": "157414"
+  },
+  {
+    "skills": "julia",
+    "avg_salary": "157244"
   }
 ]
 */
