@@ -19,7 +19,7 @@ SELECT
 FROM
 	job_postings_fact
 WHERE
-    job_title_short = 'Data Analyst'
+    job_title_short = 'Data Science'
 GROUP BY
     job_posted_month
 ORDER BY
